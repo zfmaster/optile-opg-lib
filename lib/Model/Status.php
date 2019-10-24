@@ -187,6 +187,7 @@ class Status implements ModelInterface, ArrayAccess
     const CODE_ACTIVATED = 'activated';
     const CODE_FUNCTIONING = 'functioning';
     const CODE_ENDED = 'ended';
+    const CODE_PRESET = 'preset';
     const REASON_CHARGE_REQUESTED = 'charge_requested';
     const REASON_PROCESSING_SCHEDULED = 'processing_scheduled';
     const REASON_PROCESSING_PAUSED = 'processing_paused';
@@ -352,6 +353,7 @@ class Status implements ModelInterface, ArrayAccess
             self::CODE_ACTIVATED,
             self::CODE_FUNCTIONING,
             self::CODE_ENDED,
+            self::CODE_PRESET,
         ];
     }
     
