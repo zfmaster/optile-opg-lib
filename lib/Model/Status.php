@@ -583,15 +583,7 @@ class Status implements ModelInterface, ArrayAccess
      */
     public function setCode($code)
     {
-        $allowedValues = $this->getCodeAllowableValues();
-        if (!in_array($code, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'code', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+        // Check for allowed code is removed, because anyway there is bug into Optile API docs and not all codes are listed
         $this->container['code'] = $code;
 
         return $this;
@@ -616,15 +608,7 @@ class Status implements ModelInterface, ArrayAccess
      */
     public function setReason($reason)
     {
-        $allowedValues = $this->getReasonAllowableValues();
-        if (!in_array($reason, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'reason', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+        // Check for allowed reasons is removed, because anyway there is bug into Optile API docs and not all reasons are listed
         $this->container['reason'] = $reason;
 
         return $this;
